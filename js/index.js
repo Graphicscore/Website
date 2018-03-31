@@ -1,14 +1,14 @@
 $(".card-toggle").on("click", function(){
-	
-	// Card toggle state 	
+
+	// Card toggle state
 	$(".card-toggle").removeClass("active");
 	$(this).addClass("active");
-	
+
 	var isAnimating = false;
-	
+
 	if( !isAnimating ){
 		isAnimating = true;
-		
+
 		$(".card").find(".card-content").css("z-index",0);
 		$(".card").removeClass("active");
 
@@ -20,7 +20,7 @@ $(".card-toggle").on("click", function(){
 			that.parent().toggleClass("active").find(".card-content").on("transitionend", function(){
 				isAnimating = false;
 			});	;
-			
+
 		},10);
 	} else {
 		return;
@@ -36,9 +36,9 @@ $("input,textarea").blur(function(){
 });
 
 $(".contact").on("click",function(){
-	$(".contact-form").toggleClass("active");
-});
-$(".contact-form input[type=submit], .contact-form .close").on("click",function(e){
+     window.location.href = "mailto:louven.dominik@gmail.com";
+ });
+/*$(".contact-form input[type=submit], .contact-form .close").on("click",function(e){
 	e.preventDefault();
 	$(".contact-form").toggleClass("active")
-});
+});*/
