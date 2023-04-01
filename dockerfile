@@ -1,3 +1,5 @@
 FROM nginx:1.23.4-alpine
 
-ADD /* /usr/share/nginx/html/*
+RUN /bin/bash -c "mkdir -p /usr/share/nginx/html"
+
+ADD /* /usr/share/nginx/html/
