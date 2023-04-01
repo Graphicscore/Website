@@ -12,7 +12,7 @@ PORTAINER_TOKEN_HEADER="Authorization: Bearer $PORTAINER_TOKEN"
 
 echo "Pull latest image..."
 #pull image
-http --ignore-stdin POST "$PORTAINER_DOCKER_URL/images/create?fromImage=ghcr.io%2Fgraphicscore%2Fmonitoring:latest" "$PORTAINER_TOKEN_HEADER"
+http --ignore-stdin POST "$PORTAINER_DOCKER_URL/images/create?fromImage=ghcr.io%2Fgraphicscore%2Fwebsite:latest" "$PORTAINER_TOKEN_HEADER"
 
 echo "Request information about currently running container..."
 #get info about currently running ffxivstats container and save json response
